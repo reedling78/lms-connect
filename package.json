@@ -1,0 +1,65 @@
+{
+  "name": "lms-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/lms-connect.min.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "start": "NODE_ENV=production & webpack -p",
+    "lint": "esw ./src/lms/**/*.js -w",
+    "server": "sudo node test/server.js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "./node_modules/babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true,
+        "tsConfigFile": "tsconfig.json"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@git.coates.io/digital-production/dp-toolkit/lms-connect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://git.coates.io/digital-production/dp-toolkit/lms-connect/issues"
+  },
+  "homepage": "https://git.coates.io/digital-production/dp-toolkit/lms-connect#README",
+  "dependencies": {
+    "@types/lodash": "^4.14.120",
+    "jquery": "^3.3.1",
+    "socket.io": "^2.1.1",
+    "webpack": "^3.11.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.3.0",
+    "eslint-watch": "^4.0.2",
+    "express": "^4.16.3",
+    "http": "0.0.0",
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.4",
+    "ts-loader": "^3.5.0",
+    "typescript": "^3.0.3"
+  }
+}

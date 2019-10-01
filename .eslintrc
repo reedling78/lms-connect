@@ -1,0 +1,11 @@
+{
+    "parser": "babel-eslint",
+    "rules": {
+        "semi": ["error", "never"],
+        "quotes": ["error", "single"],
+        "array-bracket-spacing": 2,
+        "no-unused-vars": 0,
+        "no-undef": 0,
+        "no-param-reassign": 0
+    }
+}
